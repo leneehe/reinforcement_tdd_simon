@@ -12,14 +12,8 @@ class SimonSays
 
   def repeat(word, timez)
     repeated = ""
-    timez.times do
-      if repeated != ""
-        repeated += " " + word
-      else
-        repeated += word
-      end
-    end
-    return repeated
+    timez.times { repeated += " " + word }
+    return repeated.lstrip
   end
 
   def start_of_word(word, number_of_letter)
